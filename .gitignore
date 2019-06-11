@@ -1,0 +1,6 @@
+.project
+.pydevproject
+.idea
+.DS_Store
+*.pyc
+__pycache__
