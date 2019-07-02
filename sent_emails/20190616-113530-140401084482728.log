@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: qurat@gmail.com
+Date: Sun, 16 Jun 2019 11:35:30 -0000
+Message-ID: <156068493027.6293.9921929882467928583@a003-00036>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/management/reset/MQ/578-42f1fa587334659c0a24/
+
+Your username, in case you've forgotten: qurat
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
