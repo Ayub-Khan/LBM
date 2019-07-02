@@ -1,0 +1,2 @@
+flake8==3.7.5
+pycodestyle==2.5.0
