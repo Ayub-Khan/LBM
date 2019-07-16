@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+<div class="element-wrapper">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="element-wrapper">
+                <h6 class="element-header">
+                    All Members
+                </h6>
+                <div class="element-box-tp">
+                    <!--------------------
+                        START - Controls Above Table
+                        -------------------->
+                    <div class="">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-8">
+                                <div class="form-inline justify-content-sm-end">
+                                    {% csrf_token %}
+                                    <input class="mr-2 mb-2 form-control form-control-sm rounded bright" value="" placeholder="Search" type="text" name="search-string">
+                                    <select class="mr-2 mb-2 form-control form-control-sm rounded bright" name="gender">
+                                        <option selected="selected" value="All">
+                                            Select Gender
+                                        </option>
+                                        {% for gender in genders %}
+                                        <option value = "{{ gender.0 }}">
+                                            {{ gender.1 }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <select class="mr-2 mb-2 form-control form-control-sm rounded bright" name="role">
+                                        <option selected="selected" value="All">
+                                            Select Role
+                                        </option>
+                                        {% for role in roles %}
+                                        <option value = "{{ role.0 }}">
+                                            {{ role.1 }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <select class="mr-2 mb-2 form-control form-control-sm rounded bright" name="class">
+                                        <option selected="selected" value="All">
+                                            Select Class
+                                        </option>
+                                        {% for class in classes %}
+                                        <option value = "{{ class.0 }}">
+                                            {{ class.1 }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                    <select class="mr-2 mb-2 form-control form-control-sm rounded bright" name="fee-status">
+                                        <option selected="selected" value="All">
+                                            Fee Status
+                                        </option>
+                                        <option value="1">
+                                            Submitted
+                                        </option>
+                                        <option value="0">
+                                            Not Submitted
+                                        </option>
+                                    </select>
+                                    <button class="mr-2 mb-2 btn btn-outline-primary" id='search-button'>Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------
+                        END - Controls Above Table
+                        ------------------          -->
+                    <!--------------------
+                        START - Table with actions
+                        ------------------  -->
+                    <div class="table-responsive">
+                        <table class="table table-padded">
+                            <thead>
+                                <tr>
+                                    <th> 
+                                        Profile 
+                                    </th>
+                                    <th>
+                                        Full Name
+                                    </th>
+                                    <th>
+                                        Gender
+                                    </th>
+                                    <th>
+                                        Role
+                                    </th>
+                                    <th>
+                                        Classes
+                                    </th>
+                                    <th>
+                                        Last Payment Date
+                                    </th>
+                                    <th>
+                                        Fee Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for user in users %}
+                                <tr>
+                                    <td class="text-center">
+                                        <a href="{% url 'members:view-member' user.username %}">
+                                        <button class="mr-2 btn btn-outline-primary" type=button> View Profile </button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class="user-with-avatar">
+                                            <img alt="" src="{{ user.picture.url }}"><span>{{ user.first_name }} {{ user.last_name }}</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        {% if  user.gender == "M"  %}
+                                        Male
+                                        {% elif user.gender == "F" %}
+                                        Female
+                                        {% else %}
+                                        Other
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if  user.role == "T"  %}
+                                        Trainer
+                                        {% elif user.role == "O" %}
+                                        Owner
+                                        {% else %}
+                                        Member
+                                        {% endif %}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ user.classes }}
+                                    </td>
+                                    <td class="row-actions">
+                                        {{ user.payment_date}}
+                                    </td>
+                                    <td class="nowrap">
+                                        {% if user.fee_submitted %}
+                                        <span class="status-pill smaller green"></span><span>Submitted</span>
+                                        {% else %}
+                                        <span class="status-pill smaller yellow"></span><span>Pending</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

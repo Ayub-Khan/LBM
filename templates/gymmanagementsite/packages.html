@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block content %}
+<div class="element-wrapper">
+<h6 class="element-header">
+    Packages
+</h6>
+<div class="element-box">
+<div class="content-i">
+    <div class="content-box">
+        <div class="section-heading centered">
+            <h1>
+                Subscription packages
+            </h1>
+            <p>
+                Following are the Subscription packages offered by the GMS.
+            </p>
+        </div>
+        <div class="pricing-plans row no-gutters">
+            <div class="pricing-plan col-sm-4">
+                <div class="plan-head">
+                    <div class="plan-image">
+                        <img alt="" src="{% static 'images/plan1.png' %}">
+                    </div>
+                    <div class="plan-name">
+                        Silver
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-price-w">
+                        <div class="price-value">
+                            2500 Rs
+                        </div>
+                        <div class="price-label">
+                            Per Month
+                        </div>
+                    </div>
+                    <div class="plan-btn-w">
+                        <a class="btn btn-primary btn-rounded" href="{% url 'gms:contact' %}">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plan-description">
+                    <h6>
+                        Quick Description
+                    </h6>
+                    <p>
+                        This is the basic package of GMS enables subscribers to use the GMS site for Gym Management.
+                    </p>
+                    <h6>
+                        Features
+                    </h6>
+                    <ul>
+                        <li>
+                            Member Management
+                        </li>
+                        <li>
+                            Attendence
+                        </li>
+                        <li>
+                            Statatistics
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricing-plan col-sm-4 highlight">
+                <div class="plan-head">
+                    <div class="plan-image">
+                        <img alt="" src="{% static 'images/plan2.png' %}">
+                    </div>
+                    <div class="plan-name">
+                        Gold
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-price-w">
+                        <div class="price-value">
+                            5000 Rs
+                        </div>
+                        <div class="price-label">
+                            Per Month
+                        </div>
+                    </div>
+                    <div class="plan-btn-w">
+                        <a class="btn btn-primary btn-rounded" href="{% url 'gms:contact' %}">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plan-description">
+                    <h6>
+                        Quick Description
+                    </h6>
+                    <p>
+                        This subscription allows subscribers to participate in our strength competition and win cash prizes.
+                    </p>
+                    <h6>
+                        Features
+                    </h6>
+                    <ul>
+                        <li>
+                            Member Management
+                        </li>
+                        <li>
+                            Attendence
+                        </li>
+                        <li>
+                            Statatistics
+                        </li>
+                        <li>
+                            Strength Competition
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricing-plan col-sm-4">
+                <div class="plan-head">
+                    <div class="plan-image">
+                        <img alt="" src="{% static 'images/plan3.png' %}">
+                    </div>
+                    <div class="plan-name">
+                        Platinum
+                    </div>
+                </div>
+                <div class="plan-body">
+                    <div class="plan-price-w">
+                        <div class="price-value">
+                            7500 Rs
+                        </div>
+                        <div class="price-label">
+                            Per Month
+                        </div>
+                    </div>
+                    <div class="plan-btn-w">
+                        <a class="btn btn-primary btn-rounded" href="{% url 'gms:contact' %}">Contact Us</a>
+                    </div>
+                </div>
+                <div class="plan-description">
+                    <h6>
+                        Quick Description
+                    </h6>
+                    <p>
+                        This subscription allows subscribers to take part in our Body Building Competition happens in every 6 months
+                        as well as have its own website under GMS domain.
+                    </p>
+                    <h6>
+                        Features
+                    </h6>
+                    <ul>
+                        <li>
+                            Member Management
+                        </li>
+                        <li>
+                            Attendence
+                        </li>
+                        <li>
+                            Statatistics
+                        </li>
+                        <li>
+                            Strength Competition
+                        </li>
+                        <li>
+                            Body Building Competition
+                        </li>
+                        <li>
+                            Sub Site
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

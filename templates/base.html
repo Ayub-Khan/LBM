@@ -1,14 +1,40 @@
-<!-- templates/base.html -->
+{% load static i18n %}
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
-</head>
-<body>
-  <main>
-    {% block content %}
+    {% block header %}
+    {% include 'header.html' %}
     {% endblock %}
-  </main>
-</body>
+    <body class="menu-position-top full-screen">
+        <div class="all-wrapper solid-bg-all">
+            <div class="layout-w">
+                <!--------------------
+                    Mobile Menu
+                    -------------------->
+{#                {% block mobile-menu %}#}
+{#                {% include 'mobile-menu.html' %}#}
+{#                {% endblock %}#}
+                <!--------------------
+                    Main Menu
+                    -------------------->
+                {% block main-menu %}
+                {% include 'main-menu.html' %}
+                {% endblock %}
+                <!--------------------
+                    Body
+                <-------------------->
+                <div class="content-w">
+                    <div class="content-i">
+                        <div class="content-box">
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display-type"></div>
+        </div>
+        {% block scripts %}
+        {% include 'scripts.html' %}
+        {% endblock %}
+    </body>
 </html>
