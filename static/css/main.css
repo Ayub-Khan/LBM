@@ -12342,7 +12342,7 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 }
 
 .user-profile.compact .up-main-info {
-  padding-top: 73%;
+  padding-top: 35%;
 }
 
 .user-profile.compact .up-head-w .up-social a {
@@ -12453,7 +12453,7 @@ strong {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0px;
-  background-image: url("../images/bg-pattern2.png");
+  background-image: url("../img/bg-pattern2.png");
   background-size: contain;
   background-repeat: repeat;
   background-position: 0 0;
@@ -15212,8 +15212,8 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.menu-with-image {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 32, 70, 0.1)), color-stop(75%, rgba(16, 20, 41, 0.2)), to(rgba(14, 21, 53, 0.65))), url(../images/body-building-motivation.jpg);
-  background-image: linear-gradient(to bottom, rgba(21, 32, 70, 0.1) 0%, rgba(16, 20, 41, 0.2) 75%, rgba(14, 21, 53, 0.65) 100%), url(../images/body-building-motivation.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 32, 70, 0.1)), color-stop(75%, rgba(16, 20, 41, 0.2)), to(rgba(14, 21, 53, 0.65))), url(../img/menu_bg.jpg) !important;
+  background-image: linear-gradient(to bottom, rgba(21, 32, 70, 0.1) 0%, rgba(16, 20, 41, 0.2) 75%, rgba(14, 21, 53, 0.65) 100%), url(../img/menu_bg.jpg) !important;
   background-color: transparent;
   background-size: cover;
   background-position: center center;
@@ -15284,8 +15284,8 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.menu-with-image.color-scheme-light {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.85))), url(../images/body-building-motivation.jpg) !important;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.85) 100%), url(../images/body-building-motivation.jpg) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.85))), url(../img/menu_bg.jpg) !important;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.85) 100%), url(../img/menu_bg.jpg) !important;
 }
 
 .menu-position-top.menu-w.menu-with-image.color-scheme-light .top-icon > .os-icon,
@@ -16992,7 +16992,6 @@ a.el-tablo:hover .label {
 .auth-box-w .logo-w {
   text-align: center;
   padding: 20%;
-  padding-left: unset;
 }
 
 .auth-box-w .auth-header {
