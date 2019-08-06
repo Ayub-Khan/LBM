@@ -53,7 +53,7 @@ clean-test: ## remove test and coverage artifacts
 lint: ## check style with flake8
 	flake8 LBM tests
 
-test-quality: ## Uses pep8 to check the quality of Code
+test-quality: lint ## Uses pep8 to check the quality of Code
 	pycodestyle --show-source
 
 install: clean ## install the package to the active Python's site-packages
