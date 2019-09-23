@@ -31,7 +31,7 @@ class ClientRegistrationView(View):
     template_name = 'client_management/create_client_profile.html'
 
     def get(self, request):
-        return render(request, self.template_name)
+        return render(request, self.template_name, {'title': 'Client Management'})
 
 
 client_registration_view = login_required(ClientRegistrationView.as_view())
