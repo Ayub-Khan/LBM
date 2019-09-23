@@ -6,5 +6,7 @@ from management import views
 
 app_name = 'management'
 urlpatterns = [
-                  path('', views.dashboard, name='dashboard')
+                  path('', views.dashboard_view, name='dashboard'),
+                  path('view_client', views.client_profile_view, name='view_client'),
+                  path('create_client', views.client_registration_view, name='create_client')
               ] + static(settings.STATIC_URL)
