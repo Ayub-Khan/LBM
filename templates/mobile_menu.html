@@ -13,13 +13,55 @@
     </div>
     <div class="menu-and-user">
 
-        <!--------------------
-        START - Mobile Menu List
-        -------------------->
+        <!---------------------------
+         START - Mobile Menu List
+        ---------------------------->
 
-        {% block mobile_menu_list %}
-            {% include 'mobile_menu_list.html' %}
-        {% endblock %}
+        <ul class="main-menu">
+            <li>
+                <a {% url 'management:dashboard' %}>
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layout"></div>
+                    </div>
+                    <span>Dashboard</span></a>
+            </li>
+            <li>
+                <a {% url 'management:dashboard' %}>
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layers"></div>
+                    </div>
+                    <span>Menu Styles</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:create_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-package"></div>
+                    </div>
+                    <span> Create Client Profile </span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:create_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-file-text"></div>
+                    </div>
+                    <span>Edit Client Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:view_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-life-buoy"></div>
+                    </div>
+                    <span>View Client Profile</span>
+                </a>
+            </li>
+        </ul>
+
+        <!---------------------------
+         END - Mobile Menu Lists
+        ---------------------------->
 
     </div>
 </div>
