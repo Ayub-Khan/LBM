@@ -1,0 +1,67 @@
+{% load static %}
+
+<div class="menu-mobile menu-activated-on-click color-scheme-dark">
+    <div class="mm-logo-buttons-w">
+        <a class="mm-logo" {% url 'management:dashboard' %}>
+            <span> Management System </span>
+        </a>
+        <div class="mm-buttons">
+            <div class="mobile-menu-trigger">
+                <div class="os-icon os-icon-hamburger-menu-1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-and-user">
+
+        <!---------------------------
+         START - Mobile Menu List
+        ---------------------------->
+
+        <ul class="main-menu">
+            <li>
+                <a {% url 'management:dashboard' %}>
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layout"></div>
+                    </div>
+                    <span>Dashboard</span></a>
+            </li>
+            <li>
+                <a {% url 'management:dashboard' %}>
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-layers"></div>
+                    </div>
+                    <span>Menu Styles</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:create_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-package"></div>
+                    </div>
+                    <span> Create Client Profile </span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:create_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-file-text"></div>
+                    </div>
+                    <span>Edit Client Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'management:view_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-life-buoy"></div>
+                    </div>
+                    <span>View Client Profile</span>
+                </a>
+            </li>
+        </ul>
+
+        <!---------------------------
+         END - Mobile Menu Lists
+        ---------------------------->
+
+    </div>
+</div>

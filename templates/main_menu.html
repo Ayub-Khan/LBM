@@ -1,0 +1,64 @@
+{% load static %}
+
+<div class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+    <div class="logo-w">
+        <a class="logo" {% url 'management:dashboard' %}>
+            <img alt="" src="{% static 'images/logo4.png' %}">
+            <div class="logo-label">
+                Management System
+            </div>
+        </a>
+    </div>
+
+    <h1 class="menu-page-header">
+        Page Header
+    </h1>
+    <ul class="main-menu">
+        <li class="sub-header">
+            <span>Layouts</span>
+        </li>
+        <li class="selected">
+            <a {% url 'management:dashboard' %}>
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a {% url 'management:dashboard' %}>
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span>Menu Styles</span>
+            </a>
+        </li>
+        <li class="sub-header">
+            <span> Client </span>
+        </li>
+        <li>
+            <a href="{% url 'management:create_client' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-package"></div>
+                </div>
+                <span> Create Client Profile </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'management:create_client' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-file-text"></div>
+                </div>
+                <span> Edit Client Profile </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'management:view_client' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-life-buoy"></div>
+                </div>
+                <span> View Client Profile </span>
+            </a>
+        </li>
+    </ul>
+</div>

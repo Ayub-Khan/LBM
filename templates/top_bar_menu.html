@@ -1,0 +1,56 @@
+{% load static %}
+
+<div class="top-bar color-scheme-transparent">
+
+    <!--------------------
+    START - Top Menu Controls
+    -------------------->
+
+    <div class="top-menu-controls">
+
+        <!--------------------
+          START - User avatar and menu in secondary top menu
+        -------------------->
+        <div class="logged-user-w">
+            <div class="logged-user-i">
+                <div class="avatar-w">
+                    <img alt="" src="{% static 'images/avatar1.jpg' %}">
+                </div>
+                <div class="logged-user-menu color-style-bright">
+                    <div class="logged-user-avatar-info">
+                        <div class="avatar-w">
+                            <img alt="" src="{% static 'images/avatar1.jpg' %}">
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                                Maria Gomez
+                            </div>
+                            <div class="logged-user-role">
+                                Administrator
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-icon">
+                        <i class="os-icon os-icon-wallet-loaded"></i>
+                    </div>
+                    <ul>
+                        <li>
+                            <a {% url 'management:dashboard' %}><i
+                                    class="os-icon os-icon-user-male-circle2"></i><span>Profile Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}"><i
+                                    class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--------------------
+        END - User avatar and menu in secondary top menu
+        -------------------->
+    </div>
+    <!--------------------
+    END - Top Menu Controls
+    -------------------->
+</div>

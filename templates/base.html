@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+<body class="menu-position-side menu-side-left full-screen with-content-panel">
+<div class="all-wrapper with-side-panel solid-bg-all">
+    <div class="layout-w">
+
+        {% block mobile_menu %}
+            {% include 'mobile_menu.html' %}
+        {% endblock %}
+
+        {% block main_menu %}
+            {% include 'main_menu.html' %}
+        {% endblock %}
+
+        <div class="content-w">
+
+            {% block top_bar_menu %}
+                {% include 'top_bar_menu.html' %}
+            {% endblock %}
+
+            <div class="content-panel-toggler">
+                <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
+            </div>
+
+            <div class="content-i">
+                <div class="content-box">
+
+                    {% block content %}
+                    {% endblock %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="display-type"></div>
+</div>
+
+{% block scripts %}
+    {% include 'scripts.html' %}
+{% endblock %}
+
+</body>
+</html>
