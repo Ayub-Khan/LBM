@@ -1,5 +1,7 @@
 .PHONY: clean clean-test clean-pyc clean-build docs help requirements
 .DEFAULT_GOAL := help
+NODE_MODULES := ./node_modules
+BOWER := $(NODE_MODULES)/bower/bin/bower
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -60,4 +62,6 @@ install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
 requirements: ## installs all dependencies
-	pip install -r requirements_dev.txt
+	# pip install -r requirements_dev.txt
+	# npm install
+	$(BOWER) install

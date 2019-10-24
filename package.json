@@ -1,0 +1,30 @@
+{
+  "name": "LBM",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "none",
+  "devDependencies": {
+    "bower": "^1.8.8",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-slim": "^0.3.0"
+  },
+  "dependencies": {
+    "npm": "^6.12.0",
+    "package.json": "^2.0.1"
+  }
+}

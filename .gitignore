@@ -101,5 +101,14 @@ ENV/
 # mypy
 .mypy_cache/
 
-# pycharm project stuff
+# Pycharm project stuff
 .idea/
+
+# Bower dependencies
+bower_components
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
