@@ -63,7 +63,14 @@ test-quality: lint ## Uses pep8 to check the quality of Code
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
-requirements: ## installs all dependencies
+install_node: ## installs node.js for npm
+	sudo apt-get install curl
+	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+requirements_python: ## installs python dependencies
+	pip install -r requirements_dev.txt
+
+requirements: install_node requirements_python ## installs all dependencies
 	pip install -r requirements_dev.txt
 	npm install
 	$(BOWER) install
