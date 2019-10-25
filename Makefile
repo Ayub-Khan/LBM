@@ -4,7 +4,7 @@
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 NODE_MODULES := $(ROOT_DIR)/node_modules
 BOWER := $(NODE_MODULES)/bower/bin/bower
-USER_FOLDER := /usr/local/bin
+USER_FOLDER := ./usr/local/bin
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
