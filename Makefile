@@ -4,7 +4,7 @@
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 NODE_MODULES := $(ROOT_DIR)/node_modules
 BOWER := $(NODE_MODULES)/bower/bin/bower
-USER_FOLDER := /usr/bin
+USER_FOLDER := /usr/bin/
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -64,14 +64,9 @@ test-quality: lint ## Uses pep8 to check the quality of Code
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
-install_node: ## installs node.js for npm
-	sudo apt-get install curl
-	curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
-requirements_python: ## installs python dependencies
-	pip install -r requirements_dev.txt
-
-requirements: install_node requirements_python ## installs all dependencies
-	pip install -r requirements_dev.txt
-	$(USER_FOLDER)/npm install
+node_requirements: ## installs node requirements
+	npm install
 	$(BOWER) install
+
+requirements: ## installs all dependencies
+	pip install -r requirements_dev.txt
