@@ -4,7 +4,6 @@
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 NODE_MODULES := $(ROOT_DIR)/node_modules
 BOWER := $(NODE_MODULES)/bower/bin/bower
-USER_FOLDER := /usr/bin/
 
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
@@ -68,5 +67,7 @@ node_requirements: ## installs node requirements
 	npm install
 	$(BOWER) install
 
-requirements: ## installs all dependencies
+python_requirements: ## installs all python dependencies
 	pip install -r requirements_dev.txt
+
+requirements: python_requirements node_requirements ## intsall all dependencies
