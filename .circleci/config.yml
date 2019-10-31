@@ -18,6 +18,6 @@ jobs:
 
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
 
-      - run: make requirements
+      - run: make python_requirements
 
       - run: make test-quality
