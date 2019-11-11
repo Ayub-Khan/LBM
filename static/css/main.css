@@ -12453,7 +12453,7 @@ strong {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0px;
-  background-image: url("../img/bg-pattern2.png");
+  background-image: url("../images/bg-pattern2.png");
   background-size: contain;
   background-repeat: repeat;
   background-position: 0 0;
@@ -12541,7 +12541,7 @@ body.menu-side-right .layout-w {
 
 .content-w {
   background-color: #f2f4f8;
-  background-image: url("../img/bg-pattern.png");
+  background-image: url("../images/bg-pattern.png");
   background-repeat: no-repeat;
   background-position: 20px 50px;
   vertical-align: top;
@@ -15212,8 +15212,8 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.menu-with-image {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 32, 70, 0.1)), color-stop(75%, rgba(16, 20, 41, 0.2)), to(rgba(14, 21, 53, 0.65))), url(../img/menu_bg.jpg) !important;
-  background-image: linear-gradient(to bottom, rgba(21, 32, 70, 0.1) 0%, rgba(16, 20, 41, 0.2) 75%, rgba(14, 21, 53, 0.65) 100%), url(../img/menu_bg.jpg) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 32, 70, 0.1)), color-stop(75%, rgba(16, 20, 41, 0.2)), to(rgba(14, 21, 53, 0.65))), url(../images/menu_bg.jpg) !important;
+  background-image: linear-gradient(to bottom, rgba(21, 32, 70, 0.1) 0%, rgba(16, 20, 41, 0.2) 75%, rgba(14, 21, 53, 0.65) 100%), url(../images/menu_bg.jpg) !important;
   background-color: transparent;
   background-size: cover;
   background-position: center center;
@@ -15284,8 +15284,8 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.menu-with-image.color-scheme-light {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.85))), url(../img/menu_bg.jpg) !important;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.85) 100%), url(../img/menu_bg.jpg) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.85))), url(../images/menu_bg.jpg) !important;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.85) 100%), url(../images/menu_bg.jpg) !important;
 }
 
 .menu-position-top.menu-w.menu-with-image.color-scheme-light .top-icon > .os-icon,
@@ -17469,15 +17469,15 @@ a.el-tablo:hover .label {
 }
 
 .cta-w.purple {
-  background-image: url("../img/cta-pattern-light.png"), -webkit-gradient(linear, left top, left bottom, from(#4B72FA), to(#934BFA));
-  background-image: url("../img/cta-pattern-light.png"), linear-gradient(-180deg, #4B72FA 0%, #934BFA 100%);
+  background-image: url("../images/cta-pattern-light.png"), -webkit-gradient(linear, left top, left bottom, from(#4B72FA), to(#934BFA));
+  background-image: url("../images/cta-pattern-light.png"), linear-gradient(-180deg, #4B72FA 0%, #934BFA 100%);
   background-size: cover;
   color: #fff;
 }
 
 .cta-w.orange {
-  background-image: url("../img/cta-pattern-light.png"), -webkit-gradient(linear, left top, left bottom, from(#FF218E), to(#E36C0F));
-  background-image: url("../img/cta-pattern-light.png"), linear-gradient(-180deg, #FF218E 0%, #E36C0F 100%);
+  background-image: url("../images/cta-pattern-light.png"), -webkit-gradient(linear, left top, left bottom, from(#FF218E), to(#E36C0F));
+  background-image: url("../images/cta-pattern-light.png"), linear-gradient(-180deg, #FF218E 0%, #E36C0F 100%);
   background-size: cover;
   color: #fff;
 }
@@ -25457,7 +25457,7 @@ body.rentals-wrapper .select2-container--default .select2-results__option[aria-s
 
 .onboarding-modal .onboarding-content.with-gradient {
   padding: 70px 50px 40px;
-  background-image: url(../img/onboarding-gradient-hor.png);
+  background-image: url(../images/onboarding-gradient-hor.png);
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
@@ -25539,7 +25539,7 @@ body.rentals-wrapper .select2-container--default .select2-results__option[aria-s
 
 .onboarding-modal .onboarding-side-by-side .onboarding-content.with-gradient {
   padding: 70px 70px 60px;
-  background-image: url(../img/onboarding-gradient-ver.png);
+  background-image: url(../images/onboarding-gradient-ver.png);
   background-size: auto 100%;
   background-position: center left;
   background-repeat: no-repeat;
@@ -27194,11 +27194,11 @@ body.color-scheme-dark .onboarding-modal button.close, .content-panel.color-sche
 }
 
 body.color-scheme-dark .onboarding-modal .onboarding-content.with-gradient, .content-panel.color-scheme-dark .onboarding-modal .onboarding-content.with-gradient {
-  background-image: url(../img/onboarding-gradient-hor-dark.png);
+  background-image: url(../images/onboarding-gradient-hor-dark.png);
 }
 
 body.color-scheme-dark .onboarding-modal .onboarding-side-by-side .onboarding-content.with-gradient, .content-panel.color-scheme-dark .onboarding-modal .onboarding-side-by-side .onboarding-content.with-gradient {
-  background-image: url(../img/onboarding-gradient-ver-dark.png);
+  background-image: url(../images/onboarding-gradient-ver-dark.png);
 }
 
 body.color-scheme-dark .onboarding-modal .onboarding-content .onboarding-title, .content-panel.color-scheme-dark .onboarding-modal .onboarding-content .onboarding-title {
@@ -28557,7 +28557,7 @@ Contents:
     padding-top: 20px;
   }
   .onboarding-modal .onboarding-side-by-side .onboarding-content.with-gradient {
-    background-image: url(../img/onboarding-gradient-hor.png);
+    background-image: url(../images/onboarding-gradient-hor.png);
     background-position: top center;
     padding: 40px 20px;
   }
