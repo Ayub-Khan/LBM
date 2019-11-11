@@ -16,11 +16,7 @@
   "license": "ISC",
   "homepage": "none",
   "devDependencies": {
-    "bower": "^1.8.8",
-    "gulp": "^4.0.2",
-    "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "bower": "^1.8.8"
   },
   "dependencies": {
     "npm": "^6.12.0",
