@@ -1,9 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 class Product(models.Model):
     title = models.CharField(max_length=30)
     date_created = models.DateField()
+
 
 class Company(models.Model):
     name = models.CharField(max_length=30)
@@ -11,6 +13,7 @@ class Company(models.Model):
     contact = models.CharField(max_length=20)
     date_created = models.DateField()
     client_type = models.CharField(max_length=20)
+
 
 class ImportExportEvents(models.Model):
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
