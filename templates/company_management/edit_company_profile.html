@@ -51,12 +51,12 @@
                                     <div class="form-group">
                                         <label for=""> Company Type </label>
                                         <select class="form-control select2" name='company_type' multiple="true">
-                                            {% for code, display_name in object.COMPANY_TYPES %}
-                                                {% if code in company.company_type %}
-                                                    <option value='{{ code }}'
-                                                            selected="true"> {{ display_name }} </option>
+                                            {% for t_code, t_name in object.COMPANY_TYPES %}
+                                                {% if t_code in company.company_type %}
+                                                    <option value='{{ t_code }}'
+                                                            selected="true"> {{ t_name }} </option>
                                                 {% else %}
-                                                    <option value='{{ code }}'> {{ display_name }}</option>
+                                                    <option value='{{ t_code }}'> {{ t_name }}</option>
                                                 {% endif %}
                                             {% endfor %}
                                         </select>
