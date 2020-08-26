@@ -1,6 +1,13 @@
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
-from django.views.generic import TemplateView, View
+from django.views.generic import (
+    TemplateView, DetailView,
+    UpdateView, ListView,
+    CreateView, DeleteView
+)
+
+from .forms import CompanyForm
+from .models import Company
 
 
 class DashboardView(TemplateView):
@@ -15,8 +22,9 @@ class DashboardView(TemplateView):
 dashboard_view = login_required(DashboardView.as_view())
 
 
-class ClientProfileView(TemplateView):
-    template_name = 'client_management/view_client_profile.html'
+class CompanyProfileView(DetailView):
+    model = Company
+    template_name = 'company_management/view_company_profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -24,14 +32,42 @@ class ClientProfileView(TemplateView):
         return context
 
 
-client_profile_view = login_required(ClientProfileView.as_view())
+company_profile_view = login_required(CompanyProfileView.as_view())
 
 
-class ClientRegistrationView(View):
-    template_name = 'client_management/create_client_profile.html'
+class CompaniesListView(ListView):
+    model = Company
+    template_name = 'company_management/list_companies.html'
+    context_object_name = 'companies'
 
-    def get(self, request):
-        return render(request, self.template_name, {'title': 'Client Management'})
+
+companies_list_view = login_required(CompaniesListView.as_view())
 
 
-client_registration_view = login_required(ClientRegistrationView.as_view())
+class CompanyRegistrationView(CreateView):
+    model = Company
+    form_class = CompanyForm
+    context_object_name = 'company'
+    template_name = 'company_management/create_company_profile.html'
+
+
+company_registration_view = login_required(CompanyRegistrationView.as_view())
+
+
+class CompanyEditView(UpdateView):
+    model = Company
+    form_class = CompanyForm
+    context_object_name = 'company'
+    template_name = 'company_management/edit_company_profile.html'
+
+
+company_edit_view = login_required(CompanyEditView.as_view())
+
+
+class CompanyDeleteView(DeleteView):
+    model = Company
+    template_name = 'company_management/confirm_delete.html'
+    success_url = reverse_lazy('management:list_companies')
+
+
+company_delete_view = login_required(CompanyDeleteView.as_view())
