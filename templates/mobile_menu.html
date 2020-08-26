@@ -34,28 +34,27 @@
                 </a>
             </li>
             <li>
-                <a href="{% url 'management:create_company' %}">
+                <a href="{% url 'management:create_client' %}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-package"></div>
                     </div>
-                    <span> Create Company Profile </span>
+                    <span> Create Client Profile </span>
                 </a>
             </li>
             <li>
-                <a href="{% url 'management:create_company' %}">
+                <a href="{% url 'management:create_client' %}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-file-text"></div>
                     </div>
-                    <span>Edit Company Profile</span>
+                    <span>Edit Client Profile</span>
                 </a>
             </li>
             <li>
-                {# un-comment later #}
-                {#                <a href="{% url 'management:view_company' pk=company.pk %}">#}
-                <div class="icon-w">
-                    <div class="os-icon os-icon-life-buoy"></div>
-                </div>
-                <span>View Company Profile</span>
+                <a href="{% url 'management:view_client' %}">
+                    <div class="icon-w">
+                        <div class="os-icon os-icon-life-buoy"></div>
+                    </div>
+                    <span>View Client Profile</span>
                 </a>
             </li>
         </ul>

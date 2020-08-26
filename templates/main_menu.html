@@ -18,48 +18,47 @@
             <span>Layouts</span>
         </li>
         <li class="selected">
-            <a href="{% url 'management:dashboard' %}">
+            <a {% url 'management:dashboard' %}>
                 <div class="icon-w">
                     <div class="os-icon os-icon-layout"></div>
                 </div>
                 <span>Dashboard</span>
             </a>
         </li>
-        {#        <li>#}
-        {#            <a href="{% url 'management:dashboard' %}">#}
-        {#                <div class="icon-w">#}
-        {#                    <div class="os-icon os-icon-layers"></div>#}
-        {#                </div>#}
-        {#                <span>Menu Styles</span>#}
-        {#            </a>#}
-        {#        </li>#}
+        <li>
+            <a {% url 'management:dashboard' %}>
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span>Menu Styles</span>
+            </a>
+        </li>
         <li class="sub-header">
-            <span> Company </span>
+            <span> Client </span>
         </li>
         <li>
-            <a href="{% url 'management:create_company' %}">
+            <a href="{% url 'management:create_client' %}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-package"></div>
                 </div>
-                <span> Create Company Profile </span>
+                <span> Create Client Profile </span>
             </a>
         </li>
         <li>
-            <a href="{% url 'management:list_companies' %}">
+            <a href="{% url 'management:create_client' %}">
                 <div class="icon-w">
                     <div class="os-icon os-icon-file-text"></div>
                 </div>
-                <span> Companies List </span>
+                <span> Edit Client Profile </span>
             </a>
         </li>
-        {# to be discussed #}
-        {#        <li>#}
-        {#            <a href="{% url 'management:view_company' pk=company.pk %}">#}
-        {#                <div class="icon-w">#}
-        {#                    <div class="os-icon os-icon-life-buoy"></div>#}
-        {#                </div>#}
-        {#                <span> View Company Profile </span>#}
-        {#            </a>#}
-        {#        </li>#}
+        <li>
+            <a href="{% url 'management:view_client' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-life-buoy"></div>
+                </div>
+                <span> View Client Profile </span>
+            </a>
+        </li>
     </ul>
 </div>
