@@ -19,14 +19,14 @@ class Company(models.Model):
         return reverse_lazy('management:list_companies')
 
     COMPANY_TYPES = (
-        ('vendor', 'Vendor'),
-        ('client', 'Client'),
+        ('v', 'Vendor'),
+        ('c', 'Client'),
     )
-    company_type = models.CharField(max_length=10, choices=COMPANY_TYPES)
+    company_type = models.CharField(max_length=1, choices=COMPANY_TYPES)
 
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=60)
-    contact = models.IntegerField()
+    contact = models.CharField(max_length=30)
     date_created = models.DateField(auto_now_add=True, editable=True)
 
 

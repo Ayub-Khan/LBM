@@ -6,8 +6,8 @@ from django.views.generic import (
     CreateView, DeleteView
 )
 
-from .forms import CompanyForm
-from .models import Company
+from management.forms import CompanyForm
+from management.models import Company
 
 
 class DashboardView(TemplateView):

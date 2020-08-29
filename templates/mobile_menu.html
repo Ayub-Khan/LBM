@@ -19,14 +19,14 @@
 
         <ul class="main-menu">
             <li>
-                <a {% url 'management:dashboard' %}>
+                <a href="{% url 'management:dashboard' %}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-layout"></div>
                     </div>
                     <span>Dashboard</span></a>
             </li>
             <li>
-                <a {% url 'management:dashboard' %}>
+                <a href="{% url 'management:dashboard' %}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-layers"></div>
                     </div>
@@ -42,20 +42,11 @@
                 </a>
             </li>
             <li>
-                <a href="{% url 'management:create_company' %}">
+                <a href="{% url 'management:list_companies' %}">
                     <div class="icon-w">
                         <div class="os-icon os-icon-file-text"></div>
                     </div>
-                    <span>Edit Company Profile</span>
-                </a>
-            </li>
-            <li>
-                {# un-comment later #}
-                {#                <a href="{% url 'management:view_company' pk=company.pk %}">#}
-                <div class="icon-w">
-                    <div class="os-icon os-icon-life-buoy"></div>
-                </div>
-                <span>View Company Profile</span>
+                    <span> Companies List </span>
                 </a>
             </li>
         </ul>

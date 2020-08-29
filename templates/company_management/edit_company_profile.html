@@ -21,8 +21,13 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label for=""> Name </label>
-                                                <input class="form-control" placeholder="Name" id='name' name='name'
-                                                       value="{{ company.name }}" type="text">
+                                                <input class="form-control" placeholder="Name"
+                                                       id='name' name='name'
+                                                       value="{{ company.name }}"
+                                                       data-error="Please input company's Name"
+                                                       minlength="3" maxlength="30"
+                                                       required="required" type="text">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -30,7 +35,10 @@
                                                 <label for=""> Address </label>
                                                 <input class="form-control" placeholder="Address" name='address'
                                                        value="{{ company.address }}"
-                                                       type="text">
+                                                       data-error="Please input company's Address"
+                                                       minlength="3" maxlength="30"
+                                                       required="required" type="text">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +49,10 @@
                                                 </label>
                                                 <input class="form-control" placeholder="Contact" name='contact'
                                                        value="{{ company.contact }}"
-                                                       type="text"/>
+                                                       data-error="Please input company's Contact"
+                                                       minlength="11" maxlength="15"
+                                                       required="required" type="number">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -50,7 +61,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for=""> Company Type </label>
-                                        <select class="form-control select2" name='company_type' multiple="true">
+                                        <select class="form-control select2" name='company_type' required="required">
                                             {% for t_code, t_name in object.COMPANY_TYPES %}
                                                 {% if t_code in company.company_type %}
                                                     <option value='{{ t_code }}'

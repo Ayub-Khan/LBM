@@ -18,9 +18,9 @@
                         </br>
                         <div class="element-box-content">
                             <button class="mr-2 mb-2 btn btn-danger" type="submit"> Yes, Delete</button>
-                            <button class="mr-2 mb-2 btn btn-success" type="button"
-                                    href="{% url 'management:view_company' pk=company.pk %}"> Cancel
-                            </button>
+                            <a class="mr-2 mb-2 btn btn-success" type="button"
+                               href="{% url 'management:list_companies' %}"> Cancel
+                            </a>
                         </div>
                     </div>
                 </div>
