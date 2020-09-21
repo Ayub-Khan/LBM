@@ -7,7 +7,7 @@
         <div class="content-box">
             <div class="element-wrapper">
                 <div class="element-box">
-                    <form method="post" action="{% url 'management:edit_company' pk=company.pk %}">
+                    <form method="post">
                         {% csrf_token %}
                         <div class="steps-w">
                             <div class="step-triggers">
@@ -25,7 +25,7 @@
                                                        id='name' name='name'
                                                        value="{{ company.name }}"
                                                        data-error="Please input company's Name"
-                                                       minlength="3" maxlength="30"
+                                                       minlength="3" maxlength="60"
                                                        required="required" type="text">
                                                 <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
@@ -36,7 +36,7 @@
                                                 <input class="form-control" placeholder="Address" name='address'
                                                        value="{{ company.address }}"
                                                        data-error="Please input company's Address"
-                                                       minlength="3" maxlength="30"
+                                                       minlength="3" maxlength="60"
                                                        required="required" type="text">
                                                 <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
@@ -50,7 +50,7 @@
                                                 <input class="form-control" placeholder="Contact" name='contact'
                                                        value="{{ company.contact }}"
                                                        data-error="Please input company's Contact"
-                                                       minlength="11" maxlength="15"
+                                                       minlength="11" maxlength="30"
                                                        required="required" type="number">
                                                 <div class="help-block form-text with-errors form-control-feedback"></div>
                                             </div>
