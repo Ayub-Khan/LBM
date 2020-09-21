@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="content-i">
+        <div class="content-box">
+            <div class="element-wrapper">
+                <div class="element-box">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="steps-w">
+                            <div class="step-triggers">
+                                <a class="step-trigger active" href="#stepContent1">
+                                    Edit Company
+                                </a>
+                            </div>
+                            <div class="step-contents">
+                                <div class="step-content active" id="stepContent1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Name </label>
+                                                <input class="form-control" placeholder="Name"
+                                                       id='name' name='name'
+                                                       value="{{ company.name }}"
+                                                       data-error="Please input company's Name"
+                                                       minlength="3" maxlength="60"
+                                                       required="required" type="text">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Address </label>
+                                                <input class="form-control" placeholder="Address" name='address'
+                                                       value="{{ company.address }}"
+                                                       data-error="Please input company's Address"
+                                                       minlength="3" maxlength="60"
+                                                       required="required" type="text">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Contact
+                                                </label>
+                                                <input class="form-control" placeholder="Contact" name='contact'
+                                                       value="{{ company.contact }}"
+                                                       data-error="Please input company's Contact"
+                                                       minlength="11" maxlength="30"
+                                                       required="required" type="number">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {# Addedd spare column #}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for=""> Company Type </label>
+                                        <select class="form-control select2" name='company_type' required="required">
+                                            {% for t_code, t_name in object.COMPANY_TYPES %}
+                                                {% if t_code in company.company_type %}
+                                                    <option value='{{ t_code }}'
+                                                            selected="true"> {{ t_name }} </option>
+                                                {% else %}
+                                                    <option value='{{ t_code }}'> {{ t_name }}</option>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="form-buttons-w text-right">
+                                        <button class="btn btn-primary">Submit Form
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
