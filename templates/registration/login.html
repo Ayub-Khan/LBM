@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>LBM</title>
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -18,43 +18,41 @@
     <link href="{% static 'bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css' %}" rel="stylesheet">
     <link href="{% static 'bower_components/slick-carousel/slick/slick.css' %}" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
-</head>
-<body class="auth-wrapper">
-<div class="all-wrapper menu-side with-pattern">
-    <div class="auth-box-w">
+  </head>
+  <body class="auth-wrapper">
+    <div class="all-wrapper menu-side with-pattern">
+      <div class="auth-box-w">
 
         <div class="logo-w">
-            <img alt="" src="{% static 'images/logo3.png' %}">
+          <img alt="" src="{% static 'images/logo3.png' %}">
         </div>
 
         <h4 class="auth-header">
-            Login
+          Login
         </h4>
 
         <form class="login" method="POST">
 
-            {% csrf_token %}
+        {% csrf_token %}
 
-            <div class="form-group">
-                <label for="">Username</label>
-                <input name="username" required_id="id_login" class="form-control" placeholder="Enter your username"
-                       type="text">
-                <div class="pre-icon os-icon os-icon-user-male-circle"></div>
-            </div>
+          <div class="form-group">
+            <label for="">Username</label>
+            <input name="username" required_id="id_login" class="form-control" placeholder="Enter your username" type="text">
+            <div class="pre-icon os-icon os-icon-user-male-circle"></div>
+          </div>
 
-            <div class="form-group">
-                <label for="">Password</label>
-                <input name="password" required_id="id_password" class="form-control" placeholder="Enter your password"
-                       type="password">
-                <div class="pre-icon os-icon os-icon-fingerprint"></div>
-            </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input name="password" required_id="id_password" class="form-control" placeholder="Enter your password" type="password">
+            <div class="pre-icon os-icon os-icon-fingerprint"></div>
+          </div>
 
-            <div class="buttons-w">
-                <button class="primaryAction btn btn-primary" type="submit">Login</button>
-            </div>
+          <div class="buttons-w">
+            <button class="primaryAction btn btn-primary" type="submit">Login</button>
+          </div>
 
         </form>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
