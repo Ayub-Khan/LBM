@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="element-wrapper">
+                <h6 class="element-header">
+                    Product's List
+                </h6>
+                <div class="element-box-tp">
+                    <!---------------------------
+                    START - Table with actions
+                    ----------------------------->
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-lg table-v2 table-striped">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Actions
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>
+                                        {{ product.title }}
+                                    </td>
+                                    <td class="row-actions">
+                                        <a href="{% url 'management:edit_product' pk=product.pk %}">
+                                            <i class="os-icon os-icon-ui-49"></i>
+                                        </a>
+                                        <a href="{% url 'management:view_product' pk=product.pk %}">
+                                            <i class="os-icon os-icon-grid-10"></i>
+                                        </a>
+                                        <a class="danger" href="{% url 'management:delete_product' pk=product.pk %}">
+                                            <i class="os-icon os-icon-ui-15"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--------------------
+                    END - Table with actions
+                    -------------------->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

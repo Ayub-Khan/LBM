@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="content-i">
+        <div class="content-box">
+            <div class="element-wrapper">
+                <div class="element-box">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="steps-w">
+                            <div class="step-triggers">
+                                <a class="step-trigger active" href="#stepContent1">
+                                    Edit Product
+                                </a>
+                            </div>
+                            <div class="step-contents">
+                                <div class="step-content active" id="stepContent1">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for=""> Name </label>
+                                                <input class="form-control" placeholder="Name"
+                                                       id='title' name='title'
+                                                       value="{{ product.title }}"
+                                                       data-error="Please input product's Name"
+                                                       minlength="3" maxlength="60"
+                                                       required="required" type="text">
+                                                <div class="help-block form-text with-errors form-control-feedback"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-buttons-w text-right">
+                                    <button class="btn btn-primary">Submit Form
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

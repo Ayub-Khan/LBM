@@ -14,6 +14,7 @@
         Page Header
     </h1>
     <ul class="main-menu">
+        <!-- Layouts -->
         <li class="sub-header">
             <span>Layouts</span>
         </li>
@@ -25,14 +26,8 @@
                 <span>Dashboard</span>
             </a>
         </li>
-        {#        <li>#}
-        {#            <a href="{% url 'management:dashboard' %}">#}
-        {#                <div class="icon-w">#}
-        {#                    <div class="os-icon os-icon-layers"></div>#}
-        {#                </div>#}
-        {#                <span>Menu Styles</span>#}
-        {#            </a>#}
-        {#        </li>#}
+        <!-- Layouts -->
+        <!-- Company -->
         <li class="sub-header">
             <span> Company </span>
         </li>
@@ -52,14 +47,27 @@
                 <span> Companies List </span>
             </a>
         </li>
-        {# to be discussed #}
-        {#        <li>#}
-        {#            <a href="{% url 'management:view_company' pk=company.pk %}">#}
-        {#                <div class="icon-w">#}
-        {#                    <div class="os-icon os-icon-life-buoy"></div>#}
-        {#                </div>#}
-        {#                <span> View Company Profile </span>#}
-        {#            </a>#}
-        {#        </li>#}
+        <!-- Company -->
+        <!-- Product -->
+        <li class="sub-header">
+            <span> Product </span>
+        </li>
+        <li>
+            <a href="{% url 'management:create_product' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-layers"></div>
+                </div>
+                <span> Create Product Profile </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'management:list_products' %}">
+                <div class="icon-w">
+                    <div class="os-icon os-icon-file-text"></div>
+                </div>
+                <span> Products List </span>
+            </a>
+        </li>
+        <!-- Product -->
     </ul>
 </div>
