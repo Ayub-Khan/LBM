@@ -11,6 +11,7 @@ class Product(models.Model):
         return reverse_lazy('management:list_products')
 
     title = models.CharField(max_length=30)
+    description = models.TextField(max_length=220)
     date_created = models.DateField(auto_now_add=True, editable=True)
 
 
