@@ -1,7 +1,7 @@
-from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 from django.views.generic import (
-    TemplateView, DetailView,
+    DetailView,
     UpdateView, ListView,
     CreateView, DeleteView
 )
@@ -10,25 +10,13 @@ from management.forms import CompanyForm
 from management.models import Company
 
 
-class DashboardView(TemplateView):
-    template_name = 'home_page.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'LBM'
-        return context
-
-
-dashboard_view = login_required(DashboardView.as_view())
-
-
 class CompanyProfileView(DetailView):
     model = Company
     template_name = 'company_management/view_company_profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'LBM'
+        context['title'] = 'LBM-Company List'
         return context
 
 
